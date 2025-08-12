@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cool Embeds Demo</title>
+  <style>
+    :root { --bg:#0f1115; --card:#151823; --ink:#e9edf1; --muted:#93a0b4; --acc:#7aa2f7; }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(15,17,21,.97),rgba(15,17,21,.7));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #1f2433}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    h1{margin:0;font-size:28px}
+    nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    nav a{display:inline-block;padding:8px 12px;border:1px solid #2a3146;border-radius:999px;text-decoration:none;color:var(--ink)}
+    nav a:hover{border-color:var(--acc)}
+    section{padding:28px 0;border-bottom:1px solid #1f2433}
+    h2{font-size:22px;margin:0 0 14px}
+    .card{background:var(--card);border:1px solid #1f2433;border-radius:16px;padding:14px;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    iframe, .embed{width:100%;border:0;border-radius:12px}
+    .hint{color:var(--muted);font-size:14px;margin-top:6px}
+    footer{color:var(--muted);padding:28px 0}
+    .pill{display:inline-block;background:#1f2433;color:#c6d0e3;border:1px solid #2a3146;border-radius:999px;padding:2px 10px;font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Cool Things You Can Embed</h1>
+      <nav aria-label="Section navigation">
+        <a href="#video">Video</a>
+        <a href="#music">Music & Audio</a>
+        <a href="#maps">Maps</a>
+        <a href="#code">Code</a>
+        <a href="#design">Design & 3D</a>
+        <a href="#social">Social</a>
+        <a href="#calendar">Calendars</a>
+        <a href="#countdown">Countdown</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="video">
+      <h2>Video (YouTube)</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="hint">Swap the <span class="pill">src</span> with your own video’s embed URL.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="music">
+      <h2>Music & Audio (Spotify + SoundCloud)</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe style="height:352px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <div class="hint">Paste any public track/album/playlist embed from Spotify.</div>
+        </div>
+        <div class="card">
+          <iframe height="166" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347186448&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=false"></iframe>
+          <div class="hint">Use SoundCloud’s Share → Embed to get this URL.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="maps">
+      <h2>Google Maps</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24143.50634536814!2d-73.9851306!3d40.7812195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f5fdfecfb%3A0x3a9d77f1a2b3f!2sCentral%20Park!5e0!3m2!1sen!2sus!4v1688320000000"></iframe>
+          <div class="hint">Google Maps → Share → Embed a map → copy iframe.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="code">
+      <h2>Code Demos (CodePen + GitHub Gist)</h2>
+      <div class="grid">
+        <div class="card">
+          <p class="codepen" data-height="320" data-default-tab="result" data-slug-hash="YzGvXqa" data-user="TheRealNema" style="height: 320px;">
+            <span>See the Pen <a href="https://codepen.io/TheRealNema/pen/YzGvXqa">Particles</a> by Nema on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <div class="hint">Any CodePen share → Embed → copy the block and the script below.</div>
+        </div>
+        <div class="card">
+          <script src="https://gist.github.com/paulirish/12fb951a8b893a454b32.js"></script>
+          <div class="hint">Replace the Gist <span class="pill">.js</span> URL with your own to show code snippets.</div>
+        </div>
+      </div>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    </section>
+
+    <section id="design">
+      <h2>Design & 3D (Figma + Sketchfab)</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/community/file/1203600198206756139" allowfullscreen></iframe>
+          <div class="hint">Figma: Share a public file → Embed.</div>
+        </div>
+        <div class="card">
+          <iframe title="3D Model" height="450" src="https://sketchfab.com/models/eed6b1b665fb4a7f8f9f3f954ed7be35/embed" allow="autoplay; fullscreen; xr; vr"></iframe>
+          <div class="hint">Sketchfab: Share → Embed to rotate and inspect 3D models.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <h2>Social (X/Twitter Timeline)</h2>
+      <div class="grid">
+        <div class="card">
+          <a class="twitter-timeline" data-height="520" href="https://twitter.com/NASA">Tweets by NASA</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="hint">Swap the profile URL for your own account or a list/hashtag.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendar">
+      <h2>Calendars (Google Calendar)</h2>
+      <div class="grid">
+        <div class="card">
+          <iframe height="600" src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FChicago"></iframe>
+          <div class="hint">Make your Google Calendar public → Settings → Integrate calendar → copy embed code.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="countdown">
+      <h2>Vanilla JS Countdown (No third‑party)</h2>
+      <div class="grid">
+        <div class="card">
+          <div id="countdown" class="embed" style="display:flex;align-items:center;justify-content:center;height:140px;font-size:28px;background:#0c0f16;border:1px dashed #2a3146">Loading…</div>
+          <div class="hint">Edit the date in the script below.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="study">
+      <h2>Study & STEM (Highly Interactive)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Desmos Graphing Calculator</h3>
+          <iframe height="500" src="https://www.desmos.com/calculator?lang=en&embed" allowfullscreen></iframe>
+          <div class="hint">Use your own Desmos link to preload a graph.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">GeoGebra</h3>
+          <iframe height="520" src="https://www.geogebra.org/material/iframe/id/ApfM3H6B/width/800/height/520/border/888/rc/0/ai/1/sdz/true/smb/false/stb/false" allowfullscreen></iframe>
+          <div class="hint">Replace the id with your own GeoGebra material.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">PhET Simulation</h3>
+          <iframe height="560" src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html" allowfullscreen></iframe>
+          <div class="hint">Swap the URL for any PhET sim.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">SageMath/Python Cell (server‑backed)</h3>
+          <div class="sagecell card" style="background:#0c0f16">
+            <script type="text/x-sage"># You can switch the language menu to Python, too
+print('Hello from SageCell')
+2^10
+</script>
+          </div>
+          <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+          <script>try{sagecell.makeSagecell({inputLocation:'.sagecell',languages:['sage','python']});}catch(e){console.warn(e)}</script>
+          <div class="hint">Runs on sagecell.sagemath.org. Great for math demos without hosting anything.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">JupyterLite (Python in the browser)</h3>
+          <iframe height="560" src="https://jupyterlite.github.io/demo/lab/index.html" sandbox="allow-scripts allow-modals allow-same-origin" allow="clipboard-write"></iframe>
+          <div class="hint">Pure WebAssembly/pyodide. No server.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Observable Notebook</h3>
+          <iframe height="620" src="https://observablehq.com/embed/@d3/zoomable-sunburst?cell=chart"></iframe>
+          <div class="hint">Use any public notebook’s embed link.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Quizlet Flashcards</h3>
+          <iframe height="520" src="https://quizlet.com/132695520/flashcards/embed" allowfullscreen></iframe>
+          <div class="hint">Share → Embed from any public set.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">H5P Interactive Content</h3>
+          <iframe height="520" src="https://h5p.org/h5p/embed/109888" allowfullscreen></iframe>
+          <div class="hint">If you host H5P, paste your own embed URL here.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Replit (Code in Browser)</h3>
+          <iframe height="560" src="https://replit.com/@replit/Intro-to-Python?embed=true" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="hint">Any public repl works with ?embed=true.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">StackBlitz (WebContainers)</h3>
+          <iframe height="560" src="https://stackblitz.com/edit/js-hello-world?embed=1&file=index.html&hideExplorer=1&hideNavigation=1" allow="clipboard-write"></iframe>
+          <div class="hint">Run JS/TS projects fully in-browser.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Mol* 3D Molecules</h3>
+          <iframe height="520" src="https://molstar.org/viewer/?pdb=1cbs" allow="xr; vr; fullscreen" allowfullscreen></iframe>
+          <div class="hint">Change the pdb param to visualize different proteins.</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:6px 0 10px;font-size:18px">Circuit Simulator (Falstad)</h3>
+          <iframe height="560" src="https://www.falstad.com/circuit/circuitjs.html" allowfullscreen></iframe>
+          <div class="hint">Menu → File → Import/Export to share circuits.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Tip: Many platforms offer an “Embed” or “Share → Embed” option. Copy their iframe/script here and you’re done.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Simple countdown widget
+    (function(){
+      const el = document.getElementById('countdown');
+      const target = new Date('2025-12-31T23:59:59-06:00').getTime(); // Change me
+      const tick = () => {
+        const now = Date.now();
+        const diff = Math.max(0, target - now);
+        const s = Math.floor(diff/1000)%60;
+        const m = Math.floor(diff/60000)%60;
+        const h = Math.floor(diff/3600000)%24;
+        const d = Math.floor(diff/86400000);
+        el.textContent = `${d}d ${h}h ${m}m ${s}s`;
+        if(diff>0) requestAnimationFrame(tick);
+        else el.textContent = '🎉 It\'s time!';
+      };
+      tick();
+    })();
+  </script>
+
+  <!-- Optional embeds you can enable later:
+  Calendly inline (replace with your scheduling link):
+  <div class="card"><div class="calendly-inline-widget" data-url="https://calendly.com/your-name/30min" style="min-width:320px;height:700px"></div></div>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  Discord server widget (needs your server ID):
+  <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark" height="400" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  -->
+</body>
+</html>
