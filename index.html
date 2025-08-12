@@ -470,7 +470,8 @@ function draw(){ background(0); ellipse(x,y,24,24); x+=vx; y+=vy; if(x<12||x>wid
       if(!file || !cvs || !window.Chart) return;
       var chart;
       function parseCSV(text){
-        const lines = text.trim().split(/?
+        const lines = text.trim().split(/
+?
 /);
         const headers = lines[0].split(',').map(s=>s.trim());
         const labels = []; const cols = headers.slice(1).map(h=>({label:h, data:[]}));
