@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cornell Note-Taking (H5P)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/styles/h5p.css">
+  <style>body{margin:0;background:#0f1115;color:#e9edf1;font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px}</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 style="margin:0 0 16px">Cornell Note-Taking (H5P)</h1>
+    <div id="h5p-container"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/frame.bundle.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.getElementById('h5p-container');
+      new H5PStandalone.H5P(el, {
+        h5pJsonPath: 'h5p/cornell',
+        frameJs: 'https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/frame.bundle.js',
+        frameCss: 'https://cdn.jsdelivr.net/npm/h5p-standalone@3.7.0/dist/styles/h5p.css',
+        fullScreen: true,
+        export: true,
+        downloadUrl: 'h5p/the-cornell-note-taking-system-1255983.h5p'
+      });
+    });
+  </script>
+</body>
+</html>
